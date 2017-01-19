@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<!-- votre commentaire -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/c9b70bfdc8.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/standby.css" />
+    <title>Musique</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <span id="titre" class="title">Lorem Ipsum</span>
+        </div>
+        <div class="col-xs-4 col-md-4 col-sm-4">
+        </div>
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <button onclick="changetext()" id="changetext" type="submit" class="btn btn-info btn-lg">lorem</button>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="pres row">
+            <div class="bg col-xs-6 col-md-6 col-sm-6">
+                <p id="present" class="text-center">Nullam eget posuere velit, finibus porttitor dolor. Pellentesque at turpis risus. Suspendisse sagittis lacinia molestie. Vestibulum imperdiet tortor in volutpat mattis. Vestibulum ut convallis dolor. In fringilla finibus velit ac tempor.
+                    Proin aliquam odio sodales magna hendrerit scelerisque.” ).
+                </p>
+                <p id="present1" class="text-center">Nullam eget posuere velit, finibus porttitor dolor. Pellentesque at turpis risus. Suspendisse sagittis lacinia molestie. Vestibulum imperdiet tortor in volutpat mattis. Vestibulum ut convallis dolor. In fringilla finibus velit ac tempor.
+                    Proin aliquam odio sodales magna hendrerit scelerisque.” ).
+                </p>
+            </div>
+            <form id="form" name="formulaire" class="form col-xs-6 col-md-6 col-sm-6">
+                <div>
+                    <input id="prenom" type="text" class="veriformulaire" name="prenom" placeholder="name:" cols="40" required="" value="" onblur="">
+                </div><br>
+                <div id="collapse3"></div><br>
+                <div>
+                    <input id="lastname" type="text" name="lastname" class="veriformulaire" placeholder="lastname:" value="" cols="40" required="" onblur="">
+                </div><br>
+                <div id="collapse4"></div><br>
+                <div>
+                    <input id="age" type="text" name="age" class="veriformulaire" placeholder="age:" cols="10" required="" value="" onblur="verifage(this)">
+                </div><br>
+                <div id="collapse5"></div><br>
+                <div>
+                    <input id="phone" type="text" name="phone" class="veriformulaire" placeholder="phone:" value="" cols="40" required="" onblur="">
+                </div><br>
+                <div id="collapse6"></div><br>
+                <div>
+                    <input id="mail" type="email" class="veriformulaire" name="email" placeholder="email:" cols="40" required="@" value="" onblur="verifMail(this)">
+                </div><br>
+                <div id="collapse7"></div><br>
+                <div>
+                    <textarea id="message" class="veriformulaire" name="message" placeholder="Message:" cols="40" value="" rows="5"></textarea>
+                </div><br>
+                <div id="collapse8"></div><br>
+                <button id="connect" onclick="valider()" type="submit" class="btn btn-default btn-info btn-lg" data-toggle="modal" data-target="#myModal" onblur="verifForm(this)">Envoyer</button>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <!-- <h4 class="modal-title">Modal Header</h4> -->
+                            </div>
+                            <div class="modal-body">
+                                <p>Votre message à bien été envoyé.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="answer"></div>
+
+            </form>
+        </div>
+        <div class="sizelast last row">
+            <div class="  last panel-group" id="accordion">
+                <div class="  last col-xs-6 col-md-6 col-sm-6 panel">
+                    <div id="qfirst" class=" last panel-heading">
+                        <h4 id="qfirst" class=" last panel-title">
+              <a id="qfirst" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+              “ Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a>
+            </h4>
+                    </div>
+                    <div id="collapse1" class=" last panel-collapse collapse in">
+                        <div id="afirst" class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="  last panel-group" id="accordion1">
+                <div class="  last col-xs-6 col-md-6 col-sm-6 panel">
+                    <div class=" last panel-heading">
+                        <h4 id="qtwo" class=" last panel-title">
+        <a id="qtwo" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
+        “ Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a>
+      </h4>
+                    </div>
+                    <div id="collapse2" class=" last panel-collapse collapse in">
+                        <div id="atwo" class=" last panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // function verifcarac(){
+            //   var carac="a,b,"
+            // }
+            var name = document.getElementById('prenom');
+            var lastname = document.getElementById('lastname');
+            var age = document.getElementById('age');
+            var phone = document.getElementById('phone');
+            var email = document.getElementById('mail');
+            var message = document.getElementById('message');
+
+            function valider() {
+                if (document.formulaire.prenom.value == "") {
+                    document.getElementById('collapse3').innerHTML = "Veuillez entrer votre prénom !";
+                    valid = false;
+                }
+
+                if (document.formulaire.lastname.value == "") {
+                    document.getElementById('collapse4').innerHTML = "Veuillez entrer votre nom !";
+                    valid = false;
+                }
+                if (document.formulaire.age.value == "") {
+                    document.getElementById('collapse5').innerHTML = "Veuillez entrer votre age !";
+                    valid = false;
+                }
+                if (document.formulaire.email.value == "") {
+                    document.getElementById('collapse7').innerHTML = "Veuillez entrer votre courriel !";
+                    valid = false;
+                }
+
+                if (document.formulaire.phone.value == "") {
+                    document.getElementById('collapse6').innerHTML = "Veuillez entrer votre numéro de téléphone !";
+                    valid = false;
+                }
+                if (document.formulaire.message.value == "") {
+                    document.getElementById('collapse8').innerHTML = "Veuillez entrer votre message !";
+                    valid = false;
+                }
+            }
+
+            //  function verifname(name){
+            //    if(document.getElementById('name').value == ''){
+            //      document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
+            //      return false;
+            //    }
+            //  }
+            function verifage(champ) {
+                var age = parseInt(age.value);
+                if (isNaN(age) || age < 5 || age > 111) {
+                    surligne(age, true);
+                    return false;
+                } else {
+                    surligne(age, false);
+                    return true;
+                }
+            }
+
+            function verifMail(mail) {
+                var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+                if (!regex.test(mail.value)) {
+                    surligne(mail, true);
+                    document.getElementById('colapse6').innerHTML = "Rythm & Lead";
+                    return false;
+                } else {
+                    surligne(mail, false);
+                    return true;
+                }
+            }
+
+            function verifForm(f) {
+                // var pseudoOk = verifPseudo(f.pseudo);
+                var mailOk = verifMail(f.email);
+                var ageOk = verifAge(f.age);
+
+                if (mailOk && ageOk)
+                    return true;
+                else {
+                    alert("Veuillez remplir correctement tous les champs");
+                    return false;
+                }
+            }
+
+            function changetext() {
+                document.getElementById('titre').innerHTML = "Rythm & Lead";
+                document.getElementById('present').innerHTML = "Rythm & Lead vous prospose un cadre agréable ciblant aussi bien les particuliers que les professionnels effectuer ";
+                document.getElementById('present1').innerHTML = "Rythm & Lead";
+                document.getElementById('collapse1').innerHTML = "Rythm & Lead";
+                document.getElementById('collapse2').innerHTML = "Rythm & Lead";
+                document.getElementById('qtwo').innerHTML = "Rythm & Lead";
+                document.getElementById('atwo').innerHTML = "Rythm & Lead";
+                document.getElementById('afirst').innerHTML = "Rythm & Lead";
+                document.getElementById('qfirst').innerHTML = "Rythm & Lead";
+            }
+
+            // 	if(	!(/^[a-z]*$/i.test(document.getElementById('name').value)) ){
+            // 		document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
+            // 		return false;
+            // 	}
+            // 	return true;
+            // }
+            //      $("#connect").click(function() {
+            //          var connect = document.getElementsById('form');
+            //          while (connect) {
+            //              document.getElementById('answer').innerHTML = "vous êtes bien connectés";
+            //              $("input").animate({
+            //                  backgroundColor: "#057814";
+            //                 color: "white";
+            //             }, 10000);
+            //     } else {
+            //         document.getElementById('answer').innerHTML = "veuillez reesayer";
+            //     }
+            // });
+            // verifier_champs();
+            // function verifier_champs(){
+            // 	if(document.getElementById('name').value == ''){
+            // 		document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
+            // 		return false;
+            // 	}
+            // 	if(	!(/^[a-z]*$/i.test(document.getElementById('name').value)) ){
+            // 		document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
+            // 		return false;
+            // 	}
+            // 	return true;
+            // }
+            // function verifmail(mail) {
+            //     var at = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+            // if (!at.test(mail.value)) {
+            //     surligne(mail, true);
+            //     return false;
+            // } else {
+            //     surligne(mail, false);
+            //     return true;
+            // // }
+            // }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js">
+        </script>
+
+        <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

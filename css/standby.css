@@ -1,0 +1,72 @@
+@font-face {
+  font-family: bunga;
+  src:url("../fonts/Bungasai.ttf");
+}
+body{
+  font-family: 'bunga';
+  background-color: #bcb595;
+}
+#titre{
+  font-size: 30px;
+}
+.navbar{
+  text-align: center;
+  z-index:1;
+  width: 100%;
+  position: fixed;
+  background-color: #ddd8c4;
+  border: none;
+  font-family: 'bunga';
+  background-size: cover;
+}
+.brand{
+    font-family: 'bunga';
+}
+.pres{
+  padding-top: 5%;
+  height:50%;
+}
+#changetext{
+  margin-left:30%;
+  text-align: center;
+  width:20%;
+  color:white;
+  background-color: #9999ff;
+}
+.bg{
+  padding-top: 10%;
+  background-size: cover;
+  color: #bcb595;
+  height:445px;
+  font-family: 'bunga';
+  background-image: url('../images/studio.jpg');
+}
+.bgquest{
+  text-align: justify;
+}
+.form{
+  text-align: center;
+  background-color: #bcb595;
+}
+textarea{
+  resize:none;
+}
+#accordion{
+margin-top: 5%;
+}
+#accordion1{
+margin-bottom: 5%;
+}
+.sizelast{
+ margin-bottom: 5%;
+}
+.last{
+  text-align: center;
+  text-decoration: none;
+  text-align: justify;
+    background-color: #bcb595;
+}
+.btn{
+  width:20%;
+  background-color: #9999ff;
+}
