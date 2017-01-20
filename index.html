@@ -118,7 +118,7 @@
             document.getElementById('titre').innerHTML = "Rythm & Lead";
             document.getElementById('present').innerHTML = "Rythm & Lead vous propose un cadre agréable ciblant aussi bien les particuliers que les professionnels souhaitant se répéter seul ou en groupe ";
             document.getElementById('present1').innerHTML = "Du matériel vous est mis à disposition et pour ceux qui désirent enregistrer leur travail, une équipe de professionnel en son, mixage et mastering entièrement à votre écoute. ";
-            document.getElementById('collapse1').innerHTML = "Rythm & Lead";
+            document.getElementById('collapse1').innerHTML = "Rythm & Lead vous propose un cadre agréable ciblant aussi bien les particuliers que les professionnels souhaitant se répéter seul ou en groupe ";
             document.getElementById('collapse2').innerHTML = "Pour profiter de nos services, en système d'abonnement par jour, par mois, à l'année est mis en place et le réglement peut être différé si ils remplissent certaines conditions se trouvant dans notre réglement ";
             document.getElementById('qtwo').innerHTML = "Comment y accéder?";
             document.getElementById('atwo').innerHTML = "Pour profiter de nos services, en système d'abonnement par jour, par mois, à l'année est mis en place et le réglement peut être différé si ils remplissent certaines conditions se trouvant dans notre réglement ";
@@ -126,50 +126,50 @@
             document.getElementById('qfirst').innerHTML = "Que trouverez vous dans les locaux de Rythm & Lead?";
 
         }
-            var name = document.getElementById('prenom');
-            var lastname = document.getElementById('lastname');
-            var age = document.getElementById('age');
-            var phone = document.getElementById('phone');
-            var email = document.getElementById('mail');
-            var message = document.getElementById('message');
-
-            var verifcarac = /^[a-zA-Z]+$/;
-
-            var verifnum = /^[0-9]{10}$/;
-
-            var verifmail = /^[a-zA-Z0-9._-]+@[a-z0-9]{2,}\.[a-z]{2,4}$/;
-
-            var mailok = verifmail.test(email);
-            var nameok = verifcarac.test(name);
-            var lastnameok = verifcarac.test(lastname);
-            var phoneok = verifnum.test(phone);
-            var ageok = verifnum.test(age);
+            // var name = document.getElementById('prenom');
+            // var lastname = document.getElementById('lastname');
+            // var age = document.getElementById('age');
+            // var phone = document.getElementById('phone');
+            // var email = document.getElementById('mail');
+            // var message = document.getElementById('message');
+            //
+            // var verifcarac = /^[a-zA-Z]+$/;
+            //
+            // var verifnum = /^[0-9]{10}$/;
+            //
+            // var verifmail = /^[a-zA-Z0-9._-]+@[a-z0-9]{2,}\.[a-z]{2,4}$/;
+            //
+            // var mailok = verifmail.test(email);
+            // var nameok = verifcarac.test(name);
+            // var lastnameok = verifcarac.test(lastname);
+            // var phoneok = verifnum.test(phone);
+            // var ageok = verifnum.test(age);
 
             function valider() {
 
                 if (document.formulaire.prenom.value == "") {
-                    document.getElementById('collapse3').innerHTML = "Veuillez entrer votre prénom !";
+                    document.getElementById('collapse3').innerHTML = "Veuillez entrer votre prénom";
                     valid = false;
                 }
                 if (document.formulaire.lastname.value == "") {
-                    document.getElementById('collapse4').innerHTML = "Veuillez entrer votre nom !";
+                    document.getElementById('collapse4').innerHTML = "Veuillez entrer votre nom";
                     valid = false;
                 }
                 if (document.formulaire.age.value == "") {
-                    document.getElementById('collapse5').innerHTML = "Veuillez entrer votre age !";
+                    document.getElementById('collapse5').innerHTML = "Veuillez entrer votre age";
                     valid = false;
                 }
                 if (document.formulaire.email.value == "") {
-                    document.getElementById('collapse7').innerHTML = "Veuillez entrer votre courriel !";
+                    document.getElementById('collapse7').innerHTML = "Veuillez entrer votre courriel";
                     valid = false;
                 }
 
                 if (document.formulaire.phone.value == "") {
-                    document.getElementById('collapse6').innerHTML = "Veuillez entrer votre numéro de téléphone !";
+                    document.getElementById('collapse6').innerHTML = "Veuillez entrer votre numéro de téléphone";
                     valid = false;
                 }
                 if (document.formulaire.message.value == "") {
-                    document.getElementById('collapse8').innerHTML = "Veuillez entrer votre message !";
+                    document.getElementById('collapse8').innerHTML = "Veuillez entrer votre message";
                     valid = false;
                 }
               }
@@ -203,8 +203,6 @@
             //         document.getElementById('answer').innerHTML = "Des caractères non spéciaux sont requis dans certains champs";
             //     }
             // }
-
-
 
         </script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

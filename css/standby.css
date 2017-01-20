@@ -3,10 +3,10 @@
   src:url("../fonts/Bungasai.ttf");
 }
 body{
+  background-size: 100% 100%;
   font-family: 'bunga';
   background-color: #bcb595;
-  background-image: url('../images/studio.jpg');
-    background-size: cover;
+  background-image: url('../images/studio1.jpg');
 }
 #titre{
   font-size: 30px;
@@ -43,6 +43,7 @@ body{
 .bg{
   padding-top: 10%;
   color: #bcb595;
+  font-size: 20px;
   height:445px;
   font-family: 'bunga';
 
@@ -51,8 +52,9 @@ body{
   text-align: justify;
 }
 .form{
+  border-radius: 20%;
   text-align: center;
-  opacity: 0.9;
+  opacity: 0.8;
   background-color: #bcb595;
 }
 textarea{
@@ -68,12 +70,11 @@ margin-bottom: 5%;
  margin-bottom: 5%;
 }
 .last{
+    opacity: 0.8;
   text-align: center;
   text-decoration: none;
   text-align: justify;
-  color:grey;
-  opacity: 0.9;
-    background-color: #bcb595;
+  color:black;
 }
 .btn{
   width:20%;
