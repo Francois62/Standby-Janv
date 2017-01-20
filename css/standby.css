@@ -52,6 +52,7 @@ body{
 }
 .form{
   text-align: center;
+  opacity: 0.9;
   background-color: #bcb595;
 }
 textarea{
@@ -70,7 +71,8 @@ margin-bottom: 5%;
   text-align: center;
   text-decoration: none;
   text-align: justify;
-  opacity: 0.8;
+  color:grey;
+  opacity: 0.9;
     background-color: #bcb595;
 }
 .btn{
