@@ -5,6 +5,8 @@
 body{
   font-family: 'bunga';
   background-color: #bcb595;
+  background-image: url('../images/studio.jpg');
+    background-size: cover;
 }
 #titre{
   font-size: 30px;
@@ -12,12 +14,17 @@ body{
 .navbar{
   text-align: center;
   z-index:1;
+  opacity: 0.9;
   width: 100%;
   position: fixed;
   background-color: #ddd8c4;
   border: none;
   font-family: 'bunga';
   background-size: cover;
+}
+.credits{
+  background-color: #7e7e7e;
+  opacity: 0.8;
 }
 .brand{
     font-family: 'bunga';
@@ -35,11 +42,10 @@ body{
 }
 .bg{
   padding-top: 10%;
-  background-size: cover;
   color: #bcb595;
   height:445px;
   font-family: 'bunga';
-  background-image: url('../images/studio.jpg');
+
 }
 .bgquest{
   text-align: justify;
@@ -64,6 +70,7 @@ margin-bottom: 5%;
   text-align: center;
   text-decoration: none;
   text-align: justify;
+  opacity: 0.8;
     background-color: #bcb595;
 }
 .btn{

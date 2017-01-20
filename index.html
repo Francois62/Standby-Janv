@@ -33,6 +33,7 @@
                 </p>
             </div>
             <form id="form" name="formulaire" class="form col-xs-6 col-md-6 col-sm-6">
+                <h1 id="title2" class="text-center titre2">Contact</h1>
                 <div>
                     <input id="prenom" type="text" class="veriformulaire" name="prenom" placeholder="name:" cols="40" required="" value="" onblur="">
                 </div><br>
@@ -106,6 +107,11 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+          <div class="credits row">
+              <p class="text-center">@Andrzejewski.François Legal - Credits</p>
+          </div>
+        </div>
         <script type="text/javascript">
             // function verifcarac(){
             //   var carac="a,b,"
@@ -117,12 +123,53 @@
             var email = document.getElementById('mail');
             var message = document.getElementById('message');
 
+            var verifcarac = /^[a-zA-Z]+$/;
+
+            var verifnum = /^[0-9]{10}$/;
+
+            var verifmail = /^[a-zA-Z0-9._-]+@[a-z0-9]{2,}\.[a-z]{2,4}$/;
+
+            var mailok = verifmail.test(email);
+            var nameok = verifcarac.test(name);
+            var lastnameok = verifcarac.test(lastname);
+            var phoneok = verifnum.test(phone);
+            var ageok = verifnum.test(age);
+
             function valider() {
+                if (mailok) {
+                    document.getElementById('collapse7').innerHTML = "votre mail est bien pris en compte";
+                } else {
+                    document.getElementById('collapse7').innerHTML = "verifiez votre mail";
+                }
+                if (nameok) {
+                    document.getElementById('collapse3').innerHTML = "votre prenom est bien pris en compte";
+                } else {
+                    document.getElementById('collapse3').innerHTML = "verifiez votre prenom";
+                }
+                if (lastnameok) {
+                    document.getElementById('collapse4').innerHTML = "votre nom est bien pris en compte";
+                } else {
+                    document.getElementById('collapse4').innerHTML = "verifiez votre nom";
+                }
+                if (phoneok) {
+                    document.getElementById('collapse6').innerHTML = "votre mail est bien pris en compte";
+                } else {
+                    document.getElementById('collapse6').innerHTML = "verifiez votre mail";
+                }
+                if (ageok) {
+                    document.getElementById('collapse5').innerHTML = "votre age est bien pris en compte";
+                } else {
+                    document.getElementById('collapse5').innerHTML = "verifiez votre age";
+                }
+
+
+
+
+
                 if (document.formulaire.prenom.value == "") {
                     document.getElementById('collapse3').innerHTML = "Veuillez entrer votre prénom !";
                     valid = false;
                 }
-
                 if (document.formulaire.lastname.value == "") {
                     document.getElementById('collapse4').innerHTML = "Veuillez entrer votre nom !";
                     valid = false;
@@ -144,7 +191,10 @@
                     document.getElementById('collapse8').innerHTML = "Veuillez entrer votre message !";
                     valid = false;
                 }
+            } else {
+                document.getElementById('answer').innerHTML = "Des caractères non spéciaux sont requis dans certains champs";
             }
+
 
             //  function verifname(name){
             //    if(document.getElementById('name').value == ''){
@@ -189,15 +239,26 @@
             }
 
             function changetext() {
+                document.body.style.background = "background-image: url(images/studio1.jpg); background-size:cover; font-family:'bunga'";
                 document.getElementById('titre').innerHTML = "Rythm & Lead";
-                document.getElementById('present').innerHTML = "Rythm & Lead vous prospose un cadre agréable ciblant aussi bien les particuliers que les professionnels effectuer ";
-                document.getElementById('present1').innerHTML = "Rythm & Lead";
+                document.getElementById('present').innerHTML = "Rythm & Lead vous propose un cadre agréable ciblant aussi bien les particuliers que les professionnels souhaitant se répéter seul ou en groupe ";
+                document.getElementById('present1').innerHTML = "Du matériel vous est mis à disposition et pour ceux qui désirent enregistrer leur travail, une équipe de professionnel en son, mixage et mastering entièrement à votre écoute. ";
                 document.getElementById('collapse1').innerHTML = "Rythm & Lead";
-                document.getElementById('collapse2').innerHTML = "Rythm & Lead";
-                document.getElementById('qtwo').innerHTML = "Rythm & Lead";
-                document.getElementById('atwo').innerHTML = "Rythm & Lead";
-                document.getElementById('afirst').innerHTML = "Rythm & Lead";
-                document.getElementById('qfirst').innerHTML = "Rythm & Lead";
+                document.getElementById('collapse2').innerHTML =  "Pour profiter de nos services, en système d'abonnement par jour, par mois, à l'année est mis en place et le réglement peut être différé si ils remplissent certaines conditions se trouvant dans notre réglement ";
+                document.getElementById('qtwo').innerHTML = "Comment y accéder?";
+                document.getElementById('atwo').innerHTML =  "Pour profiter de nos services, en système d'abonnement par jour, par mois, à l'année est mis en place et le réglement peut être différé si ils remplissent certaines conditions se trouvant dans notre réglement ";
+                document.getElementById('afirst').innerHTML = "Des instruments, des amplis, des baffles, des tables de mixage tout est possible chez Rythm & Lead";
+                document.getElementById('qfirst').innerHTML = "Que trouverez vous dans les locaux de Rythm & Lead?";
+                // $("body").animate({
+                //     backgroundColor: "#0033FF";
+                //     color: "white";
+                //     font - family: 'bunga';
+                // }, 10000);
+                // $(".bg").animate({
+                //     background - image: url('../images/studio.jpg');
+                //     color: "#bcb595";
+                //     font - family: 'bunga';
+                // }, 10000);
             }
 
             // 	if(	!(/^[a-z]*$/i.test(document.getElementById('name').value)) ){
