@@ -136,35 +136,6 @@
             var ageok = verifnum.test(age);
 
             function valider() {
-                if (mailok) {
-                    document.getElementById('collapse7').innerHTML = "votre mail est bien pris en compte";
-                } else {
-                    document.getElementById('collapse7').innerHTML = "verifiez votre mail";
-                }
-                if (nameok) {
-                    document.getElementById('collapse3').innerHTML = "votre prenom est bien pris en compte";
-                } else {
-                    document.getElementById('collapse3').innerHTML = "verifiez votre prenom";
-                }
-                if (lastnameok) {
-                    document.getElementById('collapse4').innerHTML = "votre nom est bien pris en compte";
-                } else {
-                    document.getElementById('collapse4').innerHTML = "verifiez votre nom";
-                }
-                if (phoneok) {
-                    document.getElementById('collapse6').innerHTML = "votre mail est bien pris en compte";
-                } else {
-                    document.getElementById('collapse6').innerHTML = "verifiez votre mail";
-                }
-                if (ageok) {
-                    document.getElementById('collapse5').innerHTML = "votre age est bien pris en compte";
-                } else {
-                    document.getElementById('collapse5').innerHTML = "verifiez votre age";
-                }
-
-
-
-
 
                 if (document.formulaire.prenom.value == "") {
                     document.getElementById('collapse3').innerHTML = "Veuillez entrer votre prénom !";
@@ -191,8 +162,41 @@
                     document.getElementById('collapse8').innerHTML = "Veuillez entrer votre message !";
                     valid = false;
                 }
-            } else {
+
+                if (mailok == 1) {
+                    document.getElementById('collapse7').innerHTML = "votre mail est bien pris en compte";
+                }
+                else {
+                    document.getElementById('collapse7').innerHTML = "verifiez votre mail";
+                }
+                if (nameok == 1) {
+                    document.getElementById('collapse3').innerHTML = "votre prenom est bien pris en compte";
+                }
+                else {
+                    document.getElementById('collapse3').innerHTML = "verifiez votre prenom";
+                }
+                if (lastnameok == 1) {
+                    document.getElementById('collapse4').innerHTML = "votre nom est bien pris en compte";
+                }
+                else {
+                    document.getElementById('collapse4').innerHTML = "verifiez votre nom";
+                }
+                if (phoneok == 1) {
+                    document.getElementById('collapse6').innerHTML = "votre mail est bien pris en compte";
+                }
+                else {
+                    document.getElementById('collapse6').innerHTML = "verifiez votre mail";
+                }
+                if (ageok == 1) {
+                    document.getElementById('collapse5').innerHTML = "votre age est bien pris en compte";
+                }
+                else {
+                    document.getElementById('collapse5').innerHTML = "verifiez votre age";
+                }
+
+            else {
                 document.getElementById('answer').innerHTML = "Des caractères non spéciaux sont requis dans certains champs";
+            }
             }
 
 
@@ -202,41 +206,6 @@
             //      return false;
             //    }
             //  }
-            function verifage(champ) {
-                var age = parseInt(age.value);
-                if (isNaN(age) || age < 5 || age > 111) {
-                    surligne(age, true);
-                    return false;
-                } else {
-                    surligne(age, false);
-                    return true;
-                }
-            }
-
-            function verifMail(mail) {
-                var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
-                if (!regex.test(mail.value)) {
-                    surligne(mail, true);
-                    document.getElementById('colapse6').innerHTML = "Rythm & Lead";
-                    return false;
-                } else {
-                    surligne(mail, false);
-                    return true;
-                }
-            }
-
-            function verifForm(f) {
-                // var pseudoOk = verifPseudo(f.pseudo);
-                var mailOk = verifMail(f.email);
-                var ageOk = verifAge(f.age);
-
-                if (mailOk && ageOk)
-                    return true;
-                else {
-                    alert("Veuillez remplir correctement tous les champs");
-                    return false;
-                }
-            }
 
             function changetext() {
                 document.body.style.background = "background-image: url(images/studio1.jpg); background-size:cover; font-family:'bunga'";
@@ -261,46 +230,7 @@
                 // }, 10000);
             }
 
-            // 	if(	!(/^[a-z]*$/i.test(document.getElementById('name').value)) ){
-            // 		document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
-            // 		return false;
-            // 	}
-            // 	return true;
-            // }
-            //      $("#connect").click(function() {
-            //          var connect = document.getElementsById('form');
-            //          while (connect) {
-            //              document.getElementById('answer').innerHTML = "vous êtes bien connectés";
-            //              $("input").animate({
-            //                  backgroundColor: "#057814";
-            //                 color: "white";
-            //             }, 10000);
-            //     } else {
-            //         document.getElementById('answer').innerHTML = "veuillez reesayer";
-            //     }
-            // });
-            // verifier_champs();
-            // function verifier_champs(){
-            // 	if(document.getElementById('name').value == ''){
-            // 		document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
-            // 		return false;
-            // 	}
-            // 	if(	!(/^[a-z]*$/i.test(document.getElementById('name').value)) ){
-            // 		document.getElementById('collapse3').innerHTML = "vous êtes bien connectés";
-            // 		return false;
-            // 	}
-            // 	return true;
-            // }
-            // function verifmail(mail) {
-            //     var at = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
-            // if (!at.test(mail.value)) {
-            //     surligne(mail, true);
-            //     return false;
-            // } else {
-            //     surligne(mail, false);
-            //     return true;
-            // // }
-            // }
+
         </script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/bootstrap.min.js">
