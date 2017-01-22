@@ -23,8 +23,8 @@ body{
   background-size: cover;
 }
 .credits{
-  background-color: #7e7e7e;
-  opacity: 0.8;
+  background-color: rgba(245, 245, 220, 0.5);
+
 }
 .brand{
     font-family: 'bunga';
@@ -42,7 +42,7 @@ body{
 }
 .bg{
   padding-top: 10%;
-  color: #bcb595;
+  color: rgb(255, 255, 255, 0.4);;
   font-size: 20px;
   height:445px;
   font-family: 'bunga';
@@ -54,8 +54,7 @@ body{
 .form{
   border-radius: 20%;
   text-align: center;
-  opacity: 0.8;
-  background-color: #bcb595;
+  background-color: rgba(245, 245, 220, 0.5);
 }
 textarea{
   resize:none;
@@ -70,13 +69,16 @@ margin-bottom: 5%;
  margin-bottom: 5%;
 }
 .last{
-    opacity: 0.8;
+    background-color: rgba(245, 245, 220, 0.5);
   text-align: center;
   text-decoration: none;
   text-align: justify;
-  color:black;
+}
+#connect{
+  margin-bottom: 3%;
 }
 .btn{
+
   width:20%;
   background-color: #9999ff;
 }
